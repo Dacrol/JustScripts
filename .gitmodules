@@ -1,0 +1,9 @@
+[submodule "VirtualDesktopHotkeys"]
+	path = VirtualDesktopHotkeys
+	url = https://github.com/Dacrol/VirtualDesktopHotkeys.git
+[submodule "AHKToleranceTest"]
+	path = AHKToleranceTest
+	url = https://github.com/Dacrol/AHKToleranceTest.git
+[submodule "NieR_Automata-UtilityScript"]
+	path = NieR_Automata-UtilityScript
+	url = https://github.com/Dacrol/NieR_Automata-UtilityScript.git
