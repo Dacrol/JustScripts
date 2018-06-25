@@ -7,3 +7,6 @@
 [submodule "NieR_Automata-UtilityScript"]
 	path = NieR_Automata-UtilityScript
 	url = https://github.com/Dacrol/NieR_Automata-UtilityScript.git
+[submodule "instant-youtube-dl"]
+	path = instant-youtube-dl
+	url = https://github.com/Dacrol/instant-youtube-dl.git
