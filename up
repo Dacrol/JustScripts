@@ -1,0 +1,16 @@
+function up() {
+    if [[ $1 -lt 1 ]]; then
+        echo "Only positive integer values larger than 1 are allowed!" >&2
+        echo -e "\n\tUsage:\n\t======\n\n\t\t# to go up 10 levels in your directory\n\t\tup 10\n\n\t\t# to go up just 2 levels\n\t\tup 2\n" >&2
+        return 1;
+    fi  
+
+    up=""
+
+    for ((i=1; i<=$1;i++)); do
+        up="${up}../"
+    done
+
+    cd $up
+}
+
