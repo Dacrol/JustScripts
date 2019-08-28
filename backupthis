@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+base=$(basename $PWD)
+cd ..
+backupname=$base-$(date +"%Y-%m-%d_%H-%M-%S").tar.gz
+tar -pczf $backupname $base
+cd $base
+echo "Backed up as ../$backupname"
+
