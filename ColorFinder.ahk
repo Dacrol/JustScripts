@@ -7,7 +7,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Test Colors at the mouse with ctrl+alt+PrintScreen
 */
 $!^PrintScreen::
-color := 0
+color := 255
 MouseX := 0
 MouseY := 0
 MouseGetPos, MouseX, MouseY
