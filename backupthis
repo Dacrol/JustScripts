@@ -4,7 +4,8 @@ set -e
 base=$(basename $PWD)
 cd ..
 backupname=$base-$(date +"%Y-%m-%d_%H-%M-%S").tar.gz
-env GZIP=-9 tar -pczf $backupname $base
+sudo tar -I "pigz -8" -pchf $backupname $base
+sudo chown 1000:1000 $backupname
 cd $base
 echo "Backed up as ../$backupname"
 
