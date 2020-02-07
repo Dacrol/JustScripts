@@ -4,7 +4,7 @@ set -e
 base=$(basename $PWD)
 cd ..
 backupname=$base-$(date +"%Y-%m-%d_%H-%M-%S").tar.zst
-sudo tar -I "zstd -19v -T7" -pchf $backupname $base
+sudo tar -I "zstd -12v -T7" -pcf $backupname $base $@
 sudo chown 1000:1000 $backupname
 cd $base
 echo "Backed up as ../$backupname"
