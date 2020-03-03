@@ -8,4 +8,3 @@ sudo tar -I "pigz -8" -pchf $backupname $base
 sudo chown 1000:1000 $backupname
 cd $base
 echo "Backed up as ../$backupname"
-

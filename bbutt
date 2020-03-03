@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# sudo borg create -p --stats --compression auto,zstd,9 /srv/borg/misc::${PWD##*/}-{now:%Y-%m-%dT%H:%M:%S} .
+sudo borg create --compression zstd,9 -c 600 -p --stats /srv/borg/misc::$(hostname)_${PWD##*/}-$(date +"%Y-%m-%d_%H-%M-%S") ./
+
