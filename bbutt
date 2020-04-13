@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+if [ ! -z "$1" ]
+  then
+    cd $1
+fi
+
 # sudo borg create -p --stats --compression auto,zstd,9 /srv/borg/misc::${PWD##*/}-{now:%Y-%m-%dT%H:%M:%S} .
 sudo borg create --compression zstd,12 -c 1200 -p --stats /srv/borg/misc::$(hostname)_${PWD##*/}-$(date +"%Y-%m-%d_%H-%M-%S") ./
+
+if [ ! -z "$1" ]
+  then
+    cd -
+fi
 
